@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Connectez-vous</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+ 
+  <form (ngSubmit)="login()" [formGroup]="credentials">
+    <div class="input-group">
+      <ion-item>
+        <ion-input type="username" placeholder="Nom d'utilisateur" formControlName="username"></ion-input>
+      </ion-item>
+      <div *ngIf="(username.dirty || username.touched) && username.errors" class="errors">
+        <span *ngIf="username.errors?.required">Le nom d'utilisateur est requis !</span>
+        <span *ngIf="username.errors?.username">Le nom d'utilisateur est incorrect !</span>
+      </div>
+      <ion-item>
+        <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+      </ion-item>
+      <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+        <span *ngIf="password.errors?.required">Password is required</span>
+        <span *ngIf="password.errors?.minlength">Password needs to be 6 characters</span>
+      </div>
+    </div>
+ 
+    <ion-button [routerLink]="['/tabs']" type="submit" color= "danger" expand="block" >Se Connecter</ion-button>
+    <ion-button type="button" expand="block" color="tertiary" fill="clear">Vous n'avez pas de compte? Inscrivez-vous!
+    </ion-button>
+ 
+  </form>
+</ion-content>
