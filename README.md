@@ -13,7 +13,7 @@ Partie Serveur SpringBoot &amp; Partie Client Ionic/Angular
 ## Pour Lancer Le Serveur API
 - Ouvrez le dossier Serveur via VSCode
 - Assurez-vous d'avoir connecté votre serveur PostGreSQL avec SQL Shell et pgAdmin 4
-- Une fois le serveur connecté lancer le run du Serveur API SpringBoot.
+- Une fois le serveur connecté lancer le run du Serveur API SpringBoot avec ./mvnw spring-boot:run.
 - Votre serveur sera donc sur http://localhost:8080/api/user
 
 ## Pour Lancer Le Client Ionic/Angular
